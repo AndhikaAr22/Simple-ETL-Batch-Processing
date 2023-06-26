@@ -1,5 +1,4 @@
-## Ref : harusnya di app.py itu cuma function2 dari package2 yg udh dibuat di transformasi aja jadi sisain if__name__ == '__main__': aja.
-## ini gua command tandanya harus di hapus dan dipindahkan ke file yg udh gua buat di transformasi.ingest_data
+## TODO : ini semua function yang ada di app.py
 
 # import pandas as pd
 # from connection.postgre_connection import param_config, postgreconnection
@@ -68,22 +67,3 @@
 #         curr.execute(query, list(row))
 #     conn.commit()
 #     return print("insert data success")    
-
-
-
-
-if __name__ == '__main__':
-    ## call all function form transformasi.ingest_data untuk di execute
-    # insert data to data lake
-    insert_data_tabel1(conf_postgres_data_lake)
-    insert_data_tabel2(conf_postgres_data_lake)
-    insert_data_tabel3(conf_postgres_data_lake)
-
-    # created table dwh
-    create_table_data_warehouse(conf_postgres_data_warehouse)
-
-    # insert data to dwh
-    insert_data_warehouse_country()
-    insert_data_warehouse_accounts_data()
-    insert_data_warehouse_accounts_series()
-
