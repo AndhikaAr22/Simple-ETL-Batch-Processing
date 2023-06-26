@@ -8,11 +8,9 @@ def param_config(config):
         conf = json.load(file)
 
     try:
-        conf = conf[config]
-        return conf
+        return conf[config]
     except:
-        print("check config")
-
+        return("check config")
 
 def con_postgres(conf):
     while True:
@@ -25,32 +23,10 @@ def con_postgres(conf):
             )
             break
         except:
-            print("confi wrong")
-
+            raise Exception("Cant Connect To Postgres DB")
     return conn
 
-def postgreconnection(conf):
-    while True:
-        try:
-            conn = psycopg2.connect(
-                host= conf["host"],
-                user= conf["user"],
-                password= conf["password"],
-                database= conf["database"],
-                port=conf["port"]
-            )
-            break
-        except:
-            print("confi wrong")
-            
-    return conn  
-
-
-def postgreconnection_sql(conf):
-    engine = create_engine(f"postgresql+psycopg2://{conf['user']}:{conf['password']}@{conf['host']}:{conf['port']}/{conf['database']}")
-    return engine
-    
-def connect_postgre(conf):
+def connect_postgre(conf): ## -> sebenarnya fucntion ini gausah ada lebih bagus karna udh ada functuon con_postgres yg fungsinya itu sama aja seperti functuin ini.
     try:
         conn = psycopg2.connect(
             host= conf["host"],
@@ -65,7 +41,7 @@ def connect_postgre(conf):
 
     except Exception as e:
         print("can't connect postgresql")
-        print(str(e))
+        print(e)
 
 
 
