@@ -1,8 +1,5 @@
 # ignore config
 config.json
 
-# ignore env
 env/
-
-# ignore
-__pycahe__/
+__pycache__/
