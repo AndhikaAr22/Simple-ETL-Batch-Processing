@@ -1,3 +1,20 @@
+# query data lake
+def datalake_table_insert_table_accountscountry():
+    return """
+    SELECT * FROM anccounts_country
+    """
+
+
+def datalake_table_insert_table_accountdata():
+    return """
+    SELECT * FROM anccounts_data
+    """
+
+def datalake_table_insert_table_accountsseries():
+    return """
+    SELECT * FROM anccounts_series
+    """
+
 
 # table accountscountry
 def insert_table_accountscountry():
