@@ -8,14 +8,14 @@ if __name__ == '__main__':
 
     # insert data to data lake
     insert_data_tabel1()
-    insert_data_tabel2()
-    insert_data_tabel3()
+    # insert_data_tabel2()
+    # insert_data_tabel3()
 
     # created table dwh
-    create_table_datawarehouse()
+    # create_table_datawarehouse()
 
-    # insert data to dwh
-    insert_data_warehouse_country()
-    insert_data_warehouse_accounts_data()
-    insert_data_warehouse_accounts_series()
+    # # insert data to dwh
+    # insert_data_warehouse_country()
+    # insert_data_warehouse_accounts_data()
+    # insert_data_warehouse_accounts_series()
 
